@@ -1,0 +1,25 @@
+{#
+This file is part of EC-CUBE
+
+Copyright(c) EC-CUBE CO.,LTD. All Rights Reserved.
+
+http://www.ec-cube.co.jp/
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+#}
+{% block stylesheet %}
+{% endblock %}
+
+<div class="ec-headerNav">
+    {% if is_granted('ROLE_USER') %}
+        <a class="fa-user" href="{{ url('mypage') }}"></a>
+        <a class="fa-user" href="{{ url('logout') }}"></a>
+    {% else %}
+        <a class="fa-user" href="{{ url('entry') }}"></a>
+        <a class="fa-user" href="{{ url('mypage_login') }}"></a>
+    {% endif %}
+</div>
+
+{% block javascript %}
+{% endblock %}

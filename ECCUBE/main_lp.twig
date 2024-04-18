@@ -1,0 +1,32 @@
+{#
+This file is part of EC-CUBE
+
+Copyright(c) EC-CUBE CO.,LTD. All Rights Reserved.
+
+http://www.ec-cube.co.jp/
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+#}
+
+    {% block stylesheet %}
+    {% endblock %}
+
+<div class="NewAboutWrap">
+      <div class="cover">
+        <picture>
+          <source srcset="{{ asset('assets/img/pic0101.jpg','user_data') }}" media="(min-width: 768px)">
+          <img src="images/pic01sp.jpg" alt=""></picture>
+      </div>
+      <figure class="main_logo"> <img class="main_images" src="{{ asset('assets/img/logo_f.png','user_data') }}" width="351" height="118" alt="Feliageフェリアージュ"/> </figure>
+      <h2>フェリアージュ</h2>
+      <h3>至福、最高の幸せ</h3>
+      <p class="intros">フェリアージュは全商品共通して、ＥＧＦ*（ヒトオリゴペプチド-1）・フラーレン・カイネチンを配合した世界最高峰の高機能性を目指している化粧品ブランドです。</p>
+      <p class="intros">EGF*（ヒトオリゴペプチド-1）の配合によって肌質改善、高保湿効果が期待でき、更にフラーレンによってその効果を増幅し、カイネチンによってそれらの効果を加速します。</p>
+      <p class="intros">また、パラベンなどの旧薬事法の表示指定成分は無添加とした安全性の高い処方設計の本格的な化粧料です。
+        敏感肌の方をはじめ、赤ちゃんから大人まで、男女を問わずどなたでも安心してご使用いただけるような化粧品です。</p>
+      <p class="intros">*上皮細胞再生因子</p>
+    </div>
+
+    {% block javascript %}
+    {% endblock %}

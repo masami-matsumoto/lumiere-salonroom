@@ -1,0 +1,31 @@
+
+<title>Lieu de Lumiére</title>
+<meta charset="utf-8" />
+<meta name="description" content="フェリアージュ | Feliage | ＥＧＦ・フラーレン・カイネチンを全商品に配合 | リュー・ドゥ・ルミエール"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+ <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-N9BXLFFPMN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-N9BXLFFPMN');
+</script>
+
+ {% block stylesheet %}
+ <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="/html/user_data/assets/css/main.css">
+    <link rel="stylesheet" href="/html/user_data/assets/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/html/user_data/assets/css/contents.css">
+    {% endblock %}
+
+  
+  {% block javascript %}
+    <script src="{{ asset('assets/js/jquery.min.js', 'user_data') }}"></script>
+    <script src="{{ asset('assets/js/browser.min.js', 'user_data') }}"></script>
+    <script src="{{ asset('assets/js/breakpoints.min.js', 'user_data') }}"></script>
+    <script src="{{ asset('assets/js/util.js', 'user_data') }}"></script>
+    <script src="{{ asset('assets/js/main.js', 'user_data') }}"></script>
+    {% endblock %}

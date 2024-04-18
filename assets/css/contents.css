@@ -1054,7 +1054,7 @@ p.condition_area {
   left: 0;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: auto;
   display: block;
   -o-object-fit: cover;
   object-fit: cover;
@@ -1738,19 +1738,18 @@ div#undercolumn_shopping .pay_area02 .textareaDiv textarea {
   background: #fff;
 }
 #footer .links ul {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  margin: 0 0 2em 0;
   padding-left: 0;
-}
-#footer ul li {
-  display: inline-block;
-  padding-left: 0;
+  flex-grow: 1;
 }
 #footer .links ul li {
-  line-height: 1;
-  margin-left: 1em;
-  padding-left: 1em;
-}
-#footer .links ul li:first-child {
-  margin-left: 0;
+  margin: 0 12px;
   padding-left: 0;
 }
 #footer .links ul li a {
@@ -1768,12 +1767,8 @@ div#undercolumn_shopping .pay_area02 .textareaDiv textarea {
   letter-spacing: 0.25em;
 }
 @media screen and (max-width: 460px) {
-	#footer {
-		padding: 2em;
-	}
-  #footer .links ul li:last-child {
-    margin-left: 0;
-    padding-left: 0;
+  #footer {
+    padding: 2em;
   }
 }
 #salon .salon_logo {
@@ -1788,15 +1783,15 @@ div#undercolumn_shopping .pay_area02 .textareaDiv textarea {
   margin-bottom: 4em;
 }
 .info {
-	font-size: 0.7em;
+  font-size: 0.7em;
 }
 .info_area .photo, .info_area .info {
-	width: 100%;
+  width: 100%;
 }
 .info_area img {
-    width: 100%;
-    height: auto;
-  }
+  width: 100%;
+  height: auto;
+}
 @media only screen and (min-width: 768px) {
   .info_area {
     display: flex;
@@ -1813,4 +1808,90 @@ div#undercolumn_shopping .pay_area02 .textareaDiv textarea {
 }
 .info th, .info td {
   letter-spacing: 0.25em;
+}
+/* ==============================================
+▼dropdown
+=============================================== */
+.has-child {
+  position: relative;
+}
+#header li.has-child .dropdown {
+  position: absolute;
+  font-size: 0;
+  right: -60px;
+  top: 41px;
+  z-index: 10;
+  width: 200px;
+  height: 50px;
+  box-shadow: 0 0 0 1px #e1e0db inset;
+  background-color: #fbfbf6;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .3s;
+}
+#header li.has-child .dropdown > li {
+  display: inline-block;
+  width: 50%;
+  margin: 0 !important;
+  vertical-align: top;
+}
+#header li.has-child .dropdown > li a {
+  font-size: 12px;
+  display: block;
+  text-align: center;
+  margin: 0;
+  width: 100px;
+  height: 100%;
+  background: rgba(255, 255, 255, 0);
+  -webkit-transition: .2s all ease;
+  -moz-transition: .2s all ease;
+  -ms-transition: .2s all ease;
+  text-indent: 0;
+}
+#header li.has-child:hover > ul, #header li.has-child ul li:hover > ul, #header li.has-child:active > ul, #header li.has-child ul li:active > ul {
+  visibility: visible;
+  opacity: 1;
+}
+#header li.has-child .dropdown li a:hover {
+  background: #e1e0db;
+  opacity: .7;
+}
+ul.actions .button {
+	font-family: YuGothic, "游ゴシック", "Yu Gothic", "ヒラギノ角ゴ Pro W3", "メイリオ", sans-serif;
+}
+.ec-shelfGrid a {
+    border-bottom: none;
+}
+.ec-radio input[type="radio"] + label {
+	height: 2.0625em;
+	line-height: 2.0625em;
+}
+.ec-checkbox label {
+	margin-bottom: 0.5em;
+}
+/* 20240418追加 */
+#firstset .cover {
+	max-width: 1120px;
+	margin: 80px auto 60px;
+}
+#firstset a {
+	border-bottom: 0;
+}
+#firstset a.image.featured {
+	overflow: hidden;
+}
+#firstset a.image.featured img {
+    -moz-transition: -moz-transform 0.2s ease-out;
+    -webkit-transition: -webkit-transform 0.2s ease-out;
+    -ms-transition: -ms-transform 0.2s ease-out;
+    transition: transform 0.2s ease-out;
+}
+#firstset a.image.featured:hover img {
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+#firstset .cover img {
+	height: auto;
 }

@@ -19,10 +19,11 @@
   <h1><a href="index.html"><img src="images/logo_l.png" width="351" height="48" alt=""/></a></h1>
   <nav class="links">
     <ul>
-      <li><a href="single.html">ABOUT</a></li>
-      <li><a href="#">HERBS</a></li>
-      <li><a href="#">MENU</a></li>
-      <li><a href="#">ITEM</a></li>
+      <li><a href="about.html">ABOUT</a></li>
+      <li><a href="#">PRODUCTS</a></li>
+      <li><a href="#salon">SALON</a></li>
+      <li><a href="#voice">VOICE</a></li>
+      <li><a href="#news">NEWS</a></li>
       <li><a href="#">CONTACT</a></li>
     </ul>
   </nav>
@@ -33,7 +34,12 @@
           <input type="text" name="query" placeholder="Search" />
         </form>
       </li>
-      <li class="user"><a class="fa-user" href="#">Log In</a></li>
+      <li class="user has-child"><a class="fa-user" href="#">Log In</a>
+        <ul class="dropdown">
+          <li><a href="#">ログイン</a></li>
+          <li><a href="#">新規会員登録</a></li>
+        </ul>
+      </li>
       <li class="shopping-cart"><a class="fa-shopping-cart" href="#">Cart</a></li>
       <li class="menu"> <a class="fa-bars" href="#menu">Menu</a> </li>
     </ul>
@@ -51,10 +57,11 @@
     <!-- Links -->
     <section>
       <ul class="links">
-        <li><a href="single.html">ABOUT</a></li>
-        <li><a href="#">HERBS</a></li>
-        <li><a href="#">MENU</a></li>
-        <li><a href="#">ITEM</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="#">PRODUCTS</a></li>
+        <li><a href="#salon">SALON</a></li>
+        <li><a href="#voice">VOICE</a></li>
+        <li><a href="#news">NEWS</a></li>
         <li><a href="#">CONTACT</a></li>
       </ul>
     </section>
@@ -62,7 +69,8 @@
     <!-- Actions -->
     <section>
       <ul class="actions stacked">
-        <li><a href="#" class="button large fit">Log In</a></li>
+        <li><a href="#" class="button large fit">ログイン</a></li>
+		<li><a href="#" class="button large fit">新規会員登録</a></li>  
       </ul>
     </section>
   </section>
@@ -74,7 +82,11 @@
   <!-- Main -->
   <div id="main">
     <div class="NewAboutWrap">
-      <div class="cover"><img src="images/pic0101.jpg" alt=""></div>
+      <div class="cover">
+        <picture>
+          <source srcset="images/pic0101.jpg" media="(min-width: 768px)">
+          <img src="images/pic01sp.jpg" alt=""></picture>
+      </div>
       <figure class="main_logo"> <img class="main_images" src="images/logo_f.png" width="351" height="118" alt="Feliageフェリアージュ"/> </figure>
       <h2>フェリアージュ</h2>
       <h3>至福、最高の幸せ</h3>
@@ -163,9 +175,9 @@
         </div>
       </div>
     </section>
-    <section>
+    <section id="voice">
       <header class="section-header">
-        <h3>NEWS</h3>
+        <h3>CUSTOMER'S VOICE</h3>
       </header>
       <ul class="news">
         <li> <span class="date">2024.03.3</span>
@@ -176,27 +188,46 @@
         </li>
       </ul>
     </section>
+    <section id="news">
+      <header class="section-header">
+        <h3>NEWS</h3>
+      </header>
+      <ul class="news">
+        <li> <span class="date">2024.04.10</span>
+          <p>ホームページからフェリアージュ商品を購入出来るようになりました。</p>
+        </li>
+        <li> <span class="date">2024.03.22</span>
+          <p>ホームページをリニューアルしました。</p>
+        </li>
+        <li> <span class="date">2024.01.05</span>
+          <p>フェリアージュ商品の販売を開始しました。</p>
+        </li>
+        <li> <span class="date">2024.01.01</span>
+          <p>Lieu de Lumiere(リュー・ドゥ・ルミエール)として事業を開始いたしました。</p>
+        </li>
+      </ul>
+    </section>
   </div>
 </div>
 <!-- Footer -->
 <footer id="footer">
   <nav class="links">
     <ul>
-      <li><a href="#">ABOUT</a></li>
-      <li><a href="#">HERBS</a></li>
-      <li><a href="#">MENU</a></li>
-      <li><a href="#">ITEM</a></li>
-      <li><a href="#">CONTACT</a></li>
+      <li><a href="#">事業内容</a></li>
+      <li><a href="#">製品一覧</a></li>
+      <li><a href="#">プライバシーポリシー</a></li>
+      <li><a href="#">特定商取引法に基づく表示</a></li>
+      <li><a href="#">お問い合わせ</a></li>
     </ul>
   </nav>
   <ul class="icons">
     <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
     <li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
     <li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-    <li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
-    <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+    <!-- <li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+    <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li> -->
   </ul>
-  <p class="copyright">&copy; Untitled. Design: <a href="http://html5up.net">HTML5 UP</a>. Images: <a href="http://unsplash.com">Unsplash</a>.</p>
+  <p class="copyright">&copy; Copyright © 2024 Lieu de Lumiere.</p>
 </footer>
 
 <!-- Scripts --> 

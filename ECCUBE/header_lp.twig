@@ -1,0 +1,104 @@
+{#
+This file is part of EC-CUBE
+
+Copyright(c) EC-CUBE CO.,LTD. All Rights Reserved.
+
+http://www.ec-cube.co.jp/
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+#}
+{% block stylesheet %}
+{% endblock %}
+<!-- Header -->
+<header id="header">
+  <h1><a href="{{ url('homepage') }}"><img src="{{ asset('assets/img/logo_l.png','user_data') }}" width="351" height="48" alt=""/></a></h1>
+  <nav class="links">
+    <ul>
+      <li><a href="https://lieude-lumiere.com/user_data/about">ABOUT</a></li>
+      <li><a href="{{ url('product_list') }}">PRODUCTS</a></li>
+      <li><a href="https://lieude-lumiere.com/#salon">SALON</a></li>
+      <li><a href="https://lieude-lumiere.com/#voice">VOICE</a></li>
+      <li><a href="https://lieude-lumiere.com/#news">NEWS</a></li>
+      <li><a href="{{ url('contact') }}">CONTACT</a></li>
+    </ul>
+  </nav>
+  <nav class="main">
+    <ul>
+     <li class="search"> <a class="fa-search" href="#search">Search</a>
+        <form id="search" method="get" action="{{ path('product_list') }}">
+        <input type="search" name="name" maxlength="50" class="search-name" placeholder="キーワードを入力">
+       {# submitボタン：エンターでもアクション出来たので、コメントアウト
+       <button class="ec-headerSearch__keywordBtn" type="submit">
+                    <div class="ec-icon">
+                        <img src="/html/template/default/assets/icon/search-dark.svg" alt="">
+                    </div>
+        </button> #}
+        </form>
+      </li>
+      <li class="user has-child"><a class="fa-user" href="{{ url('mypage_login') }}">Log In</a>
+      {% if is_granted('ROLE_USER') %}
+      <ul class="dropdown">
+        <li><a href="{{ url('mypage') }}">マイページ</a></li>
+        <li><a href="{{ url('logout') }}">ログアウト</a></li>
+      </ul>
+      {% else %}
+      <ul class="dropdown">
+        <li><a href="{{ url('entry') }}">新規会員登録</a></li>
+        <li><a href="{{ url('mypage_login') }}">ログイン</a></li>
+      </ul>
+      {% endif %}
+    </li>
+      <li class="shopping-cart"><a class="fa-shopping-cart" href="{{ url('cart') }}">Cart</a></li>
+      <li class="menu"> <a class="fa-bars" href="#menu">Menu</a> </li>
+    </ul>
+  </nav>
+  <!-- Menu -->
+  <section id="menu"> 
+    
+    <!-- Search -->
+    <section>
+      <form class="search" method="get" action="#">
+        <input type="text" name="query" placeholder="Search" />
+      </form>
+    </section>
+    
+    <!-- Links -->
+    <section>
+      <ul class="links">
+        <li><a href="https://lieude-lumiere.com/user_data/about">ABOUT</a></li>
+        <li><a href="{{ url('product_list') }}">PRODUCTS</a></li>
+        <li><a href="https://lieude-lumiere.com/#salon">SALON</a></li>
+        <li><a href="https://lieude-lumiere.com/#voice">VOICE</a></li>
+        <li><a href="https://lieude-lumiere.com/#news">NEWS</a></li>
+        <li><a href="{{ url('contact') }}">CONTACT</a></li>
+      </ul>
+    </section>
+    
+    <!-- Actions -->
+    <section>
+        {% if is_granted('ROLE_USER') %}
+        <ul class="actions stacked">
+      <li class="user">
+      <a class="button large fit" href="{{ url('logout') }}">ログアウト</a>
+        </li>
+        <li class="user">
+        <a class="button large fit" href="{{ url('mypage') }}">マイページ</a>
+      </li>
+      </ul>
+    {% else %}
+    <ul class="actions stacked">
+    <li class="user">
+        <a class="button large fit" href="{{ url('mypage_login') }}">ログイン</a>
+        </li>
+        <li class="user">
+        <a class="button large fit" href="{{ url('entry') }}">新規会員登録</a>
+        </li>
+        </ul>
+    {% endif %}
+    </section>
+  </section>
+</header>
+
+{% block javascript %}
+{% endblock %}
